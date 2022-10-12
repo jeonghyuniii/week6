@@ -76,32 +76,40 @@
     
    <div id="imgDiv">
    
-   
-   </div>
-   
     <div id = "vert">
             <button id = "yes" >예</button></div>
     <div id = "vert2">
-            <button id = "no" >아니요</button></div>
+            <button id = "no" onclick="makeImg()">아니요</button></div>
         
-    
+    </div>
         
 
        <script type="text/javascript">
-        no.onclick = function(){
-            img=document.createElement("img");
+        function makeImg(){
+         
+         //버튼 지워주는 코드
+         var _div = document.getElementById("imgDiv");
+         _div.removeChild(document.getElementById("vert"));
+         _div.removeChild(document.getElementById("vert2"));
+         
+         for(var i=0;i<5;i++){
+            img = document.createElement("img");
+         img.id=i;
          img.src="clover.png";
          img.width="150";
          img.height="150";
-         
-         var _div = document.getElementById("imgDiv");
-            _div.appendChild(img);
+         img.style="margin:20px;";
+         //실제로 사진 붙여주는 코드
+         _div.appendChild(img);         
+         }
+      
         }
 
      
     </script>
 </body>
 </html>
+
 
 
 
