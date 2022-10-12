@@ -36,12 +36,7 @@
             border-radius: 40%;
             background-color: #FFFFFF;
         }
-        #container {
-
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
+      
            
         #vert {
             margin: 0;
@@ -78,23 +73,36 @@
 </head>
 <body>
     <h1>당신은 행복하신가요?</h1>
-    <div>
-        <div id = "vert">
-            <button id = "yes" onclick="myYes()">예</button>
-        </div>
-        <div id = "vert2">
-            <button id = "no" onclick="myNo()">아니요</button>
-        </div>
-    </div>
-        <div id = "container"></div>
+    
+   <div id="imgDiv">
+   
+   
+   </div>
+   
+    <div id = "vert">
+            <button id = "yes" >예</button></div>
+    <div id = "vert2">
+            <button id = "no" >아니요</button></div>
+        
+    
+        
 
        <script type="text/javascript">
-
+        no.onclick = function(){
+            img=document.createElement("img");
+         img.src="clover.png";
+         img.width="150";
+         img.height="150";
+         
+         var _div = document.getElementById("imgDiv");
+            _div.appendChild(img);
+        }
 
      
     </script>
 </body>
 </html>
+
 
 
 
